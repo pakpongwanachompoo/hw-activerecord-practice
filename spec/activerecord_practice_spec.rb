@@ -36,7 +36,7 @@ describe 'ActiveRecord practice' do
       before(:each) do
         expect(Customer).to receive(:where).at_least(:once).and_call_original
       end
-      xspecify 'anyone with first name Candice' do
+      specify 'anyone with first name Candice' do
         check Customer.any_candice, [24]
       end
       xspecify 'with valid email (email addr contains "@") (HINT: look up SQL LIKE operator)' do
